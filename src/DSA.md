@@ -3,6 +3,8 @@
  Operand is the data which is easily manipulated with the help of opearator .
  1 stand for the true .
  0 stand for the false.
+ In programming when you use the term `inclusive` it simply means you are considiring the start and end point of the range .
+
  # Bit-wise operator 
  The opeartor that works at the bit level is bit wise opearator.
   `&(Bitwise AND )`
@@ -73,6 +75,25 @@ fn main(){
 
 }
 ```
+
+# Array 
+There are two types of array one is fixed size and other one is dynamically typed . Array of any size can implement the following traits if the element type allows it.
+`Copy`
+
+
+`Fixed size Array `
+
+`DYNAMICALLY TYPED `
+Here size is not known at the compile time .
+In this size grow automatically whenever there is need of it .
+In this the insertion of data is at the last .
+In rust it exist behind the pointer.
+Pointer of `Dynamicaaly size type` become wide pointer because it contain the information and pointer both.
+`HEAP Array` 
+It is one the example of dynamically typed array.This crates gives the better control on how we want to allocate the space to memory .
+The basic difference between pointer and wide pointer is that pointer can address a certain range of memory but wide pointer can address a larger range of memeory address.
+
+
 
 
 
