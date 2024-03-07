@@ -4,6 +4,7 @@
  1 stand for the true .
  0 stand for the false.
  In programming when you use the term `inclusive` it simply means you are considiring the start and end point of the range .
+ Statically generated means that code or data  which is generated at the compile time rather then runtime.
 
  # Bit-wise operator 
  The opeartor that works at the bit level is bit wise opearator.
@@ -78,7 +79,10 @@ fn main(){
 
 # Array 
 There are two types of array one is fixed size and other one is dynamically typed . Array of any size can implement the following traits if the element type allows it.
-`Copy`
+Traits is used to define shared behaviour accros difrent types.
+Here we can move elements out of and array with the slice pattern.
+
+
 
 
 `Fixed size Array `
@@ -92,7 +96,7 @@ Pointer of `Dynamicaaly size type` become wide pointer because it contain the in
 `HEAP Array` 
 It is one the example of dynamically typed array.This crates gives the better control on how we want to allocate the space to memory .
 The basic difference between pointer and wide pointer is that pointer can address a certain range of memory but wide pointer can address a larger range of memeory address.
-
+   
 
 
 
