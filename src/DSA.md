@@ -5,7 +5,8 @@
  0 stand for the false.
  In programming when you use the term `inclusive` it simply means you are considiring the start and end point of the range .
  Statically generated means that code or data  which is generated at the compile time rather then runtime.
-
+`Problem` It is a question to which we seek an answer. 
+Algorithm is the step by procedure which can solve any instances of a problem. 
  # Bit-wise operator 
  The opeartor that works at the bit level is bit wise opearator.
   `&(Bitwise AND )`
@@ -97,6 +98,7 @@ Pointer of `Dynamicaaly size type` become wide pointer because it contain the in
 It is one the example of dynamically typed array.This crates gives the better control on how we want to allocate the space to memory .
 The basic difference between pointer and wide pointer is that pointer can address a certain range of memory but wide pointer can address a larger range of memeory address.
    
+- A list is the simply a collectiond of items arranged in a particular sequence .
 
 
 

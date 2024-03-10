@@ -50,3 +50,5 @@ In bit we say `set` to typicaly to particular bit in binary whose value at parti
 For example set at 1 means in 5 is the the value at index 1 should be 1.
 
 
+
+
