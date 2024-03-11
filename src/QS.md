@@ -54,5 +54,45 @@ For example set at 1 means in 5 is the the value at index 1 should be 1.
   ## Sequential Search 
   Is the key x in the array S of n keys?
 
+```Rust
+
+fn sequential (arr: &[i32],traget : i32) -> Option<usize>{
+    for (index,&value)in arr.iter().enumerate() {
+        if value ==traget {
+            return Some(index);
+        }
+    }
+    None
+
+}
+
+fn main (){
+  let arr1 = [1,2,3,4,5,6];
+  let target2  =20;
+  match  sequential(&arr1, target2) {
+    Some(index) => println!("Target found at index : {}",index),
+    None => println!("The target value is not found")
 
 
+  }
+  
+  }
+
+```
+# Algorithm 1.2
+ ## Add Array Members
+ ```Rust
+ fn add ( sum : &[i32]) -> i32 {
+    let mut sum1 =0;
+    for  &k3 in sum {
+    sum1+=k3;
+}
+ sum1 
+}
+fn main (){
+    let  k4 = [4,5,6];
+    let sum3=add(&k4);
+
+  print!("{}",sum3);
+}
+ ```
