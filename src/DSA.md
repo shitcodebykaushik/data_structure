@@ -100,7 +100,17 @@ The basic difference between pointer and wide pointer is that pointer can addres
    
 - A list is the simply a collectiond of items arranged in a particular sequence .
 
+ - In Rust, the while keyword is used to create a loop that continues executing its block of code as long as a specified condition evaluates to true. 
+ ```Rust
+ fn main(){
+    let mut  k1 =5;
+    while k1 <14 {
+        println!("THE value is good {}",k1);
+        k1+= 1;  // It is the shorthand notation for the implementing the variable in k1+1.
 
+    }
+}
+ ```
 
 
 

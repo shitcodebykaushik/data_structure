@@ -50,5 +50,9 @@ In bit we say `set` to typicaly to particular bit in binary whose value at parti
 For example set at 1 means in 5 is the the value at index 1 should be 1.
 
 
+# Algorithm 1.1
+  ## Sequential Search 
+  Is the key x in the array S of n keys?
+
 
 
