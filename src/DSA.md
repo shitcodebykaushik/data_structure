@@ -113,6 +113,10 @@ The basic difference between pointer and wide pointer is that pointer can addres
  ```
  # EExchange sort 
  Exchange sort" is a term that typically refers to sorting algorithms where elements are compared and swapped to arrange them in a specific order, such as ascending or descending. The most well-known exchange sort algorithm is the "Bubble Sort
+ # Sequential search Versus Binary Search
+    Binary search is efficiant technique of searching and it is quite complex ,as it works on the concept of divide and conquer.
+    Time comlexity is O(log n).
+    Sequential search is simple technique of searching and it is easy to implement ,it is iterative in nature. Time complexity is O(n).
  # docker image ls 
 
 

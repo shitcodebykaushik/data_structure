@@ -120,14 +120,55 @@ fn main (){
   ## Matrix Multiplication
    Problem determine the product of two n*n matrics 
 
-   # Sequential search Versus Binary Search
-    Binary search is efficiant technique of searching and it is quite complex ,as it works on the concept of divide and conquer.
-    Time comlexity is O(log n).
-    Sequential search is simple technique of searching and it is easy to implement ,it is iterative in nature. Time complexity is O(n).
+   
   # Algorithm 1.5
   -  Binary Search
    Problem : Determine wheather x is in the sorted array S of 'n' keys 
    Output: Location of x in S (0 if x is not in S ).
 
- 
+ ```Rust
+ fn binary_search (arr : &[i32], target : i32) -> Option<usize>{
+    let mut low = 0;
+    let mut high = arr.len () -1;
+    while low <=high {
+        let mid = low +(high -low) /2 ;
 
+        if arr[mid] == target {
+            return Some((mid)); 
+        } else if arr[mid] <target {
+            low = mid +1;
+            
+        } else {
+
+            high =mid -1;
+
+        }
+        }
+         None
+    
+}
+fn main (){
+    let  a1 = [1,2,3,4,5];
+    let d2 =40;
+     match binary_search(&a1, d2) {
+         Some(index) => println!( "{} found at the index {:?}", d2,a1),
+         None => println!("{} not found in the array ",d2),
+     }
+}
+ ```
+ # Algorithm 1.6
+ nth Fibonachi Term (Recursive)
+ ``` Rust 
+ fn fid ( n : usize  ) -> i128 {
+if n <= 1 {
+   n as i128
+}else  {
+      fid( n-1) + fid(n-2)
+}
+}
+fn main (){
+ let f = 12;
+ println!( "Fibonacci number is {} : {:?}",f,fid(f))
+}
+
+ ```
