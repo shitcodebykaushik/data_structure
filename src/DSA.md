@@ -111,7 +111,10 @@ The basic difference between pointer and wide pointer is that pointer can addres
     }
 }
  ```
- 
+ # EExchange sort 
+ Exchange sort" is a term that typically refers to sorting algorithms where elements are compared and swapped to arrange them in a specific order, such as ascending or descending. The most well-known exchange sort algorithm is the "Bubble Sort
+ # docker image ls 
+
 
 
 

@@ -96,3 +96,38 @@ fn main (){
   print!("{}",sum3);
 }
  ```
+ # Algorithm 1.3
+ ```Rust
+ fn nondecreasing_sort (g1 : &mut[u128]){
+ let n = g1.len();
+ for i in 0..n {
+    for j in 0..n-i-1 {
+        if  g1[j]>g1[j+1]{
+            g1.swap(j, j+1);
+        }
+    }
+ }
+} 
+fn main (){
+    let mut arr = [23,789,45];
+    println!("The value befor sorting {:?}",arr);
+    
+    nondecreasing_sort(&mut arr);
+    println!("The value befor sorting {:?}",arr);
+}
+ ```
+ # Algorithm 1.4
+  ## Matrix Multiplication
+   Problem determine the product of two n*n matrics 
+
+   # Sequential search Versus Binary Search
+    Binary search is efficiant technique of searching and it is quite complex ,as it works on the concept of divide and conquer.
+    Time comlexity is O(log n).
+    Sequential search is simple technique of searching and it is easy to implement ,it is iterative in nature. Time complexity is O(n).
+  # Algorithm 1.5
+  -  Binary Search
+   Problem : Determine wheather x is in the sorted array S of 'n' keys 
+   Output: Location of x in S (0 if x is not in S ).
+
+ 
+
