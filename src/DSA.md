@@ -7,6 +7,7 @@
  Statically generated means that code or data  which is generated at the compile time rather then runtime.
 `Problem` It is a question to which we seek an answer. 
 Algorithm is the step by procedure which can solve any instances of a problem. 
+ Sorting means the process of arranging of elements in specific order.Typically based on some predefined criteria.
  # Bit-wise operator 
  The opeartor that works at the bit level is bit wise opearator.
   `&(Bitwise AND )`
@@ -117,8 +118,33 @@ The basic difference between pointer and wide pointer is that pointer can addres
     Binary search is efficiant technique of searching and it is quite complex ,as it works on the concept of divide and conquer.
     Time comlexity is O(log n).
     Sequential search is simple technique of searching and it is easy to implement ,it is iterative in nature. Time complexity is O(n).
- # docker image ls 
 
+#  Analysis of Algorithm 
+To determine the how efficincy an algorithm work.
+  # Complexity  Analysis 
+ # docker image ls 
+ 
+# Merge sort 
+Algorithm implementation is left 
+A process releted to the sorting is merging. By two-way merging we mean a combinig two sorted arrays into one sorted array.
+Merge sort involves the following process :-
+ - Divide the array into two subarrays each with n/2 items .
+ - Conquer(solve) each subarray by sorting it .unless the array is sufficiently small,use recursion to do this .
+ - Combine the solutin to the subarrays by merging them into a single sorted arrays.
+ 
+ # Pivot
+ In the context of sorting algorithms, a "pivot" is a chosen element from a list that is used to partition the list into two parts during the sorting process. The pivot element serves as a reference point for reorganizing the elements around it.
+
+ # Quick Sort 
+  It worjs on the divide and conquer factor .
+  It was developed by Hoare (1962). It is similiar to Mergesort .
+  The main fundamental of quicksort is that the array is partitioned by placing all items smaller then the pivot items before that items and all items larger then the pivot items after that.For simplicity we can make any itmem as pivot itmes else we sometime chosse first itme as pivot items.
+  Example :- 15,22,13,27,12,10,20,25
+             Here we have selected 15 as pivot items and now we have arranged the array in smaller one 
+             10,13,12 [All smaller array ] `15` 22,27,20,25 [All larger array]. Now we can sort this accoring to our need.
+
+
+              
 
 
 
