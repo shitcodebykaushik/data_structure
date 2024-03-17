@@ -144,7 +144,33 @@ Merge sort involves the following process :-
              10,13,12 [All smaller array ] `15` 22,27,20,25 [All larger array]. Now we can sort this accoring to our need.
 
 
-              
+# Starssen's Matrix Multiplication Algorithm 
+ Multiplication of two matrices requires O(N^3) running time but we can reduce this time to O(N^2.81) by using an efficient approach which is known as Strassen Matrix multiplication.
+ It works on the concept of divide and conquer.
+ It is faster for the loonger matrix. 
+ It reduces the number of multiplication.
+ Lower time complexity then the traditonally matrix.
+  Pseudocode 
+  Algorithm MULTIPLY_MATRIX(A, B, C)
+for i <- 1 to n do
+  for j <- 1 to n do
+    C[i][j] <- 0
+    for k <- 1 to n do
+      C[i][j] <- C[i][j] + A[i][k]*B[k][j]
+    end
+  end
+end
+# Larger Integer Multiplication 
+Done
+# Dynamic programming 
+  Dynamic programming is similar to divide-and-conquer in
+that an instance of a problem is divided into smaller instances. However, in this
+approach we solve small instances first, store the results, and later, whenever we
+need a result, look it up instead of recomputing it. The term “dynamic
+programming” comes from control theory, and in this sense “programming”
+means the use of an array (table) in which a solution is constructed
+
+
 
 
 

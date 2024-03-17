@@ -210,3 +210,116 @@ fn quick_sort (arr :&mut [i32]) {
  println!("The sorted array id {:?}",k3);
  }
 ```
+# Algorithm 2.8
+ Strassen
+```Rust
+fn strassen_multiply(a: &[Vec<i32>], b: &[Vec<i32>]) -> Vec<Vec<i32>> {
+   let n = a.len();
+   assert!(n == b.len() && n.is_power_of_two());
+
+   if n == 1 {
+       return vec![vec![a[0][0] * b[0][0]]];
+   }
+
+   let m = n / 2;
+
+   let mut a11 = vec![vec![0; m]; m];
+   let mut a12 = vec![vec![0; m]; m];
+   let mut a21 = vec![vec![0; m]; m];
+   let mut a22 = vec![vec![0; m]; m];
+   let mut b11 = vec![vec![0; m]; m];
+   let mut b12 = vec![vec![0; m]; m];
+   let mut b21 = vec![vec![0; m]; m];
+   let mut b22 = vec![vec![0; m]; m];
+
+   for i in 0..m {
+       for j in 0..m {
+           a11[i][j] = a[i][j];
+           a12[i][j] = a[i][j + m];
+           a21[i][j] = a[i + m][j];
+           a22[i][j] = a[i + m][j + m];
+           b11[i][j] = b[i][j];
+           b12[i][j] = b[i][j + m];
+           b21[i][j] = b[i + m][j];
+           b22[i][j] = b[i + m][j + m];
+       }
+   }
+
+   let s1 = strassen_multiply(&matrix_add(&a11, &a22), &matrix_add(&b11, &b22));
+   let s2 = strassen_multiply(&matrix_add(&a21, &a22), &b11);
+   let s3 = strassen_multiply(&a11, &matrix_sub(&b12, &b22));
+   let s4 = strassen_multiply(&a22, &matrix_sub(&b21, &b11));
+   let s5 = strassen_multiply(&matrix_add(&a11, &a12), &b22);
+   let s6 = strassen_multiply(&matrix_sub(&a21, &a11), &matrix_add(&b11, &b12));
+   let s7 = strassen_multiply(&matrix_sub(&a12, &a22), &matrix_add(&b21, &b22));
+
+   let p1 = matrix_add(&matrix_sub(&matrix_add(&s1, &s4), &s5), &s7);
+   let p2 = matrix_add(&s3, &s5);
+   let p3 = matrix_add(&s2, &s4);
+   let p4 = matrix_add(&matrix_sub(&matrix_add(&s1, &s3), &s2), &s6);
+
+   let mut result = vec![vec![0; n]; n];
+   for i in 0..m {
+       for j in 0..m {
+           result[i][j] = p1[i][j];
+           result[i][j + m] = p2[i][j];
+           result[i + m][j] = p3[i][j];
+           result[i + m][j + m] = p4[i][j];
+       }
+   }
+   result
+}
+
+fn matrix_add(a: &[Vec<i32>], b: &[Vec<i32>]) -> Vec<Vec<i32>> {
+   a.iter()
+       .zip(b.iter())
+       .map(|(row_a, row_b)| row_a.iter().zip(row_b.iter()).map(|(x, y)| x + y).collect())
+       .collect()
+}
+
+fn matrix_sub(a: &[Vec<i32>], b: &[Vec<i32>]) -> Vec<Vec<i32>> {
+   a.iter()
+       .zip(b.iter())
+       .map(|(row_a, row_b)| row_a.iter().zip(row_b.iter()).map(|(x, y)| x - y).collect())
+       .collect()
+}
+
+fn main() {
+   let a = vec![
+       vec![1, 2, 3, 4],
+       vec![5, 6, 7, 8],
+       vec![9, 10, 11, 12],
+       vec![13, 14, 15, 16],
+   ];
+
+   let b = vec![
+       vec![17, 18, 19, 20],
+       vec![21, 22, 23, 24],
+       vec![25, 26, 27, 28],
+       vec![29, 30, 31, 32],
+   ];
+
+   let result = strassen_multiply(&a, &b);
+   println!("Result: {:?}", result);
+}
+
+``` 
+# Algorithm 2.9
+Larger Integer Multiplication 
+Problem: Multiply two large integers, u and v.
+Inputs: large integers u and v.
+Outputs: prod, the product of u and v.
+```Rust
+
+use num_bigint::BigInt;
+use num_traits::One;
+fn main (){
+   let i = BigInt::parse_bytes(b"1111111111111111111111111111111",10).unwrap();
+   let j = BigInt::parse_bytes(b"2222222222222222222222222222222",30).unwrap();
+ let result =i*j;
+ println!("Result :{}",result);
+}
+
+```
+# The Binomial Coefficient 
+# Arrays Playlist 
