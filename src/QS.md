@@ -323,3 +323,24 @@ fn main (){
 ```
 # The Binomial Coefficient 
 # Arrays Playlist 
+Refrence issue 
+## For largest elment this is the one of the method 
+```Rust
+fn largest (arr : &[i128])-> Option<i128>{
+ if arr.is_empty(){
+  return None;
+ }
+ let mut nums = arr[0];
+
+ for &element in arr {
+  if element>nums{
+    nums=element;
+  }
+ }
+ Some(nums)
+}
+fn main (){
+  let v= [4,786,852,7555,97];
+  println!("{:?}",largest(&v))}
+
+```
