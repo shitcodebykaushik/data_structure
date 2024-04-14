@@ -1,9 +1,10 @@
 # Basic terminology 
  Operator is symbol which is use to mainpulate the data in the code.
  Operand is the data which is easily manipulated with the help of opearator .
- 1 stand for the true .
- 0 stand for the false.
- In programming when you use the term `inclusive` it simply means you are considiring the start and end point of the range .
+  -1 stand for the true .
+ - 0 stand for the false.
+ - one nit is 4 bytes
+  In programming when you use the term `inclusive` it simply means you are considiring the start and end point of the range .
  Statically generated means that code or data  which is generated at the compile time rather then runtime.
 `Problem` It is a question to which we seek an answer. 
 Algorithm is the step by procedure which can solve any instances of a problem. 
@@ -205,6 +206,12 @@ fn main (){
 The main question is here that why we we are using the predictable size the answer is that we will be storing it stack,and is easy for data locality,instead of pointer dereferencing,the data is stored right at the point of exectuion,making it easy to cache and fast to acces.
 
 Types that don't have predicatble size required heap allocation.Heap allocation come at the considerable cost,as minimizing those typically yeilds great performance cost .
+-  Sized and unsized
+   - - The best thing is that sized it doestn change with the respect to the data it contains (sized type).  
+   - - This isn'case with the unsizned or dynamically sized ,its not easy to store the data on top when working with the stack.
+
+   The knowlegde of sized vs unsized is especially is usefull when the type is previously unknown- when working with the Rust generics,
+   
 
 
 
