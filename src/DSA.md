@@ -1,14 +1,17 @@
 # Basic terminology 
  Operator is symbol which is use to mainpulate the data in the code.
- Operand is the data which is easily manipulated with the help of opearator .
-  -1 stand for the true .
+ Operand is the data which is easily manipulated with the help of opearator.
+- 1 stand for the true .
  - 0 stand for the false.
- - one nit is 4 bytes
-  In programming when you use the term `inclusive` it simply means you are considiring the start and end point of the range .
- Statically generated means that code or data  which is generated at the compile time rather then runtime.
-`Problem` It is a question to which we seek an answer. 
-Algorithm is the step by procedure which can solve any instances of a problem. 
- Sorting means the process of arranging of elements in specific order.Typically based on some predefined criteria.
+ - one nit is 4 bytes.
+  Function signature consist od the function name parameete and reuturn type and potenitally the visibility.
+- fn function_name(param1: Type1, param2: Type2) -> ReturnType {
+    // function body}
+ - In programming when you use the term `inclusive` it simply means you are considiring the start and end point of the range .
+ - Statically generated means that code or data  which is generated at the compile time rather then runtime.
+- `Problem` It is a question to which we seek an answer. 
+- Algorithm is the step by procedure which can solve any instances of a problem. 
+- Sorting means the process of arranging of elements in specific order.Typically based on some predefined criteria.
  # Size
  The size of u8 unsined integer is 1 bytes.
  # Bit-wise operator 
@@ -87,18 +90,13 @@ There are two types of array one is fixed size and other one is dynamically type
 Traits is used to define shared behaviour accros difrent types.
 Here we can move elements out of and array with the slice pattern.
 
-
-
-
-`Fixed size Array `
-
-`DYNAMICALLY TYPED `
-Here size is not known at the compile time .
+- DYNAMICALLY TYPED 
+Here size is not known at the compile time.
 In this size grow automatically whenever there is need of it .
 In this the insertion of data is at the last .
 In rust it exist behind the pointer.
 Pointer of `Dynamicaaly size type` become wide pointer because it contain the information and pointer both.
-`HEAP Array` 
+- `HEAP Array` 
 It is one the example of dynamically typed array.This crates gives the better control on how we want to allocate the space to memory .
 The basic difference between pointer and wide pointer is that pointer can address a certain range of memory but wide pointer can address a larger range of memeory address.
    
@@ -115,7 +113,7 @@ The basic difference between pointer and wide pointer is that pointer can addres
     }
 }
  ```
- # EExchange sort 
+ # Exchange sort 
  Exchange sort" is a term that typically refers to sorting algorithms where elements are compared and swapped to arrange them in a specific order, such as ascending or descending. The most well-known exchange sort algorithm is the "Bubble Sort
  # Sequential search Versus Binary Search
     Binary search is efficiant technique of searching and it is quite complex ,as it works on the concept of divide and conquer.
@@ -124,9 +122,7 @@ The basic difference between pointer and wide pointer is that pointer can addres
 
 #  Analysis of Algorithm 
 To determine the how efficincy an algorithm work.
-  # Complexity  Analysis 
- # docker image ls 
- 
+
 # Merge sort 
 Algorithm implementation is left 
 A process releted to the sorting is merging. By two-way merging we mean a combinig two sorted arrays into one sorted array.
@@ -209,9 +205,10 @@ Types that don't have predicatble size required heap allocation.Heap allocation 
 -  Sized and unsized
    - - The best thing is that sized it doestn change with the respect to the data it contains (sized type).  
    - - This isn'case with the unsizned or dynamically sized ,its not easy to store the data on top when working with the stack.
+   -  clause means the specific parts or segments of a larger expression or statement.
+   The knowlegde of sized vs unsized is especially is usefull when the type is previously unknown- when working with the Rust generics.
+ - `Rust Generics`
 
-   The knowlegde of sized vs unsized is especially is usefull when the type is previously unknown- when working with the Rust generics,
-   
 
 
 
