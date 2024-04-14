@@ -202,5 +202,10 @@ fn main (){
 
 }
 ```
+The main question is here that why we we are using the predictable size the answer is that we will be storing it stack,and is easy for data locality,instead of pointer dereferencing,the data is stored right at the point of exectuion,making it easy to cache and fast to acces.
+
+Types that don't have predicatble size required heap allocation.Heap allocation come at the considerable cost,as minimizing those typically yeilds great performance cost .
+
+
 
 
