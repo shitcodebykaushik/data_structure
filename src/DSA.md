@@ -8,6 +8,8 @@
 `Problem` It is a question to which we seek an answer. 
 Algorithm is the step by procedure which can solve any instances of a problem. 
  Sorting means the process of arranging of elements in specific order.Typically based on some predefined criteria.
+ # Size
+ The size of u8 unsined integer is 1 bytes.
  # Bit-wise operator 
  The opeartor that works at the bit level is bit wise opearator.
   `&(Bitwise AND )`
@@ -136,7 +138,7 @@ Merge sort involves the following process :-
  In the context of sorting algorithms, a "pivot" is a chosen element from a list that is used to partition the list into two parts during the sorting process. The pivot element serves as a reference point for reorganizing the elements around it.
 
  # Quick Sort 
-  It worjs on the divide and conquer factor .
+  It works on the divide and conquer factor .
   It was developed by Hoare (1962). It is similiar to Mergesort .
   The main fundamental of quicksort is that the array is partitioned by placing all items smaller then the pivot items before that items and all items larger then the pivot items after that.For simplicity we can make any itmem as pivot itmes else we sometime chosse first itme as pivot items.
   Example :- 15,22,13,27,12,10,20,25
@@ -173,8 +175,32 @@ means the use of an array (table) in which a solution is constructed
 
 
 # Proper implementation begin here 
+  # Heaps and stacks
+  Rust's types even allow for zero overhead structures,so no additional metadata is stored.
+```Rust
+use std::mem; // This is the basic module which is use to deal with the he size and alignment of types, initializing and manipulating memory.
+struct  Mystruct {
+    a :u8,
+     b:u8,
+    c:u8,
+    d:u8,
+}
+fn main (){
+    let mystruct1 = Mystruct {
+        a:5,
+        b:7,
+       c:90,
+       d:77,
+    
+    } ;
+    println!("The size of the struct are :{}",mem::size_of::<Mystruct> ());
+    println!("THe size of the struct are :{}",mem::size_of::<[Mystruct;2]>());
+    println!("My value of the struct are a={},b={},c={},d={}",mystruct1.a,mystruct1.b,mystruct1.c,mystruct1.d);
+    
+    assert_eq!(mem::size_of::<Mystruct>(),4*mem::size_of::<u8>()); // This calculate the size of single line. As each u8 is of 1 bit . and as soon as the test case is passed the reuslt are shown to you.
+    assert_eq!(mem::size_of::<[Mystruct; 2]>(),4*mem::size_of::<u8>()*2); // This calculate the size n time and it will return the test case value after it is passed .if we decress or increase the value it will throw the error.
 
-
-
+}
+```
 
 
