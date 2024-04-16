@@ -220,4 +220,26 @@ Rust provide the implementation of traits with the genrics.
 It is simmiliar to the "Send" trait that allows us to sent the type into the multiple threads.
 Copy and clonning is the less complex as it is local moving,and it commonly occur when we pass the varibles into a function.
 Cloning is  the always deep copy of type-implemented either manually with the clone trait or by using the derive macro.
+```Rust
+use std::rc::Rc;
+fn main () {
+
+    // This is copying the data from one place to the another .It is a implicit.This may become issue when the variable is pointer as it's complitation will fail for sure.
+ let y =5;
+    let c=y;
+    println!("The value is {}",c);
+    println!("The value is {}",y);
+
+// This is where clone comes to play .It require the explict implementation of the clone() function to provide the appropriate copy of the type.
+    let c=Rc::new(45); // Here we have used the rc std lib for the counting pointer.
+
+    let b=c.clone();
+    println!("The value is {}",b);
+
+}
+```
+# Immutable storage 
+It means it state can't canot be changed after it has been created.
+An object created and given a value is assigned some space in memory .The varibles name bound to the object points to that plcae in memory and as long as the memoery is not changed
+
 
