@@ -176,7 +176,7 @@ means the use of an array (table) in which a solution is constructed
   Rust's types even allow for zero overhead structures,so no additional metadata is stored.
 ```Rust
 use std::mem; // This is the basic module which is use to deal with the he size and alignment of types, initializing and manipulating memory.
-struct  Mystruct {
+struct  Mystruct {  // The size of mystruct is always going to be 4 bytes.
     a :u8,
      b:u8,
     c:u8,
@@ -207,9 +207,17 @@ Types that don't have predicatble size required heap allocation.Heap allocation 
    - - This isn'case with the unsizned or dynamically sized ,its not easy to store the data on top when working with the stack.
    -  clause means the specific parts or segments of a larger expression or statement.
    The knowlegde of sized vs unsized is especially is usefull when the type is previously unknown- when working with the Rust generics.
- - `Rust Generics`
+# Sized and unsized 
+Compiler must know the each type size. The size is imporatant then only we can put other types on the top of the stacks.
+`Sized Types` It simple means that size doesn't change with the respect to data it contains. u8 is expample which means that it will always use 32 bit regardless you use 0 or 1000000.
+`Unsized Types` It simple means thad size change with the respact to data it contains it may grow or it may shrink.
 
 
+- `Rust Generics`
+Rust provide the implementation of traits with the genrics.
 
-
+# Copy and cloning
+It is simmiliar to the "Send" trait that allows us to sent the type into the multiple threads.
+Copy and clonning is the less complex as it is local moving,and it commonly occur when we pass the varibles into a function.
+Cloning is  the always deep copy of type-implemented either manually with the clone trait or by using the derive macro.
 
