@@ -251,6 +251,24 @@ Locks and mutux are  bad for the following reasons like panics in mutex zone,and
 There are many data structue crates like `RPDS` that utilize the copy on write approch with the versioning to capture state changes.
 Lock free data structure are specilized version of data structure that are vey challenging to implement .
 
+# List 
+Always remember that as a rust programmer must write the safe code .Unsafe is not a options.
+The defining characterstic,storing things in a linear ,defined relationship with the each other helps to keep the track of stuff and find it later again.
+ - `Linked list `
+  To keep the track of a bunch of items,there is simple solutions:with the each entry in the list store a pointer to the next entry,if there is no next entry in stor null/nill/None and so on and keep to the pointer to the first item. This is what called singly list .
+  Where each item is connected with the single link to the next.
+  It is queue structure .
+  
+   - Transaction log
+   In rust each itmes is chained to the next by an `option` property.
+
+
+
+
+
+
+
+
 
 
 
