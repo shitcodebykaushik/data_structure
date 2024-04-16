@@ -238,8 +238,19 @@ fn main () {
 
 }
 ```
-# Immutable storage 
-It means it state can't canot be changed after it has been created.
-An object created and given a value is assigned some space in memory .The varibles name bound to the object points to that plcae in memory and as long as the memoery is not changed
+## Immutable storage 
+It means it state can't be changed after it has been created.
+An object created and given a value is assigned some space in memory .The varibles name bound to the object points to that plcae in memory and as long as the memoery is not changed.Mutable happens at the cost of runtime with the frequent cleanup,
+## States and resoning 
+The states of an object is essentially the current values that its field have at any given time.
+
+# Concurrency and performance 
+Imutable codes are more important for the multithreaded system . Immutability is the simple way to avoid all of these runtine and extras costs .
+Mutex are the locks of the rust .
+Locks and mutux are  bad for the following reasons like panics in mutex zone,and ordering of the data structure.
+There are many data structue crates like `RPDS` that utilize the copy on write approch with the versioning to capture state changes.
+Lock free data structure are specilized version of data structure that are vey challenging to implement .
+
+
 
 
