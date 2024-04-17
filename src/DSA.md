@@ -288,71 +288,14 @@ fn main (){
 
   }
    ```
-   - Transaction log
-   In rust each itmes is chained to the next by an `option` property.
-
-   - Log replay
-   Log represent the a timeline of commmand that have been executed in the exact oreder.
-   `RefCells` checking borrowing rules at the runtime .
-```Rust
- // Append entrie from the end.
- // Removing entries from the front .
-
-use std::cell::RefCell;
-use std::rc::Rc;
- type SingleLink = Option<Rc<RefCell<Node>>>;
- // Rc<RefCell<Node>> Storing each data here helps in internall mutability. It is crucial while executing operation on the list.
-
-
- //# [derive(Clone)]
-struct  Node {
-    value :String,
-    next :SingleLink
-}
- impl Node {
-    fn new (value : String) -> Rc<RefCell<Node>> {
-        Rc::new(RefCell::new(Node{
-            value : value,
-            next: None,
-        }))
-    }
- }
-
-struct TransactionLog {
-    head: SingleLink,
-    tail:SingleLink,
-    pub length :u64
-}
-
-impl TransactionLog {
-    pub fn new_empty () -> TransactionLog {
-        TransactionLog {head:None,tail:None,length:0}
-    }
-    pub fn append (&mut self ,value :String) {
-        let new =Node::new(value);
-        match self.tail.take() { 
-            Some(old)=>old.borrow_mut().next =Some(new.clone()),
-            None => self.head=Some(new.clone())
-            
-        };
-        self.length +=1;
-        self.tail =Some(new);
-        
-    }
-}
-
-
-
-fn main (){
-    
-}
-```
 
    # Singly linked list 
    - A singly linked list is a linear data structure in which elements are stored in nodes, and each node points to the next node in the list. It is called a singly linked list because each node has a single link to the next node. In a singly linked list, you can traverse the list only in one direction, from the head (the first node) to the tail (the last node).
    - Travesre means visting each elements in the list to perform the operation.
    - Push means to insert at the end
   - Pop meand to remove from the begining 
+
+# Binary search Tree
 
 
 
