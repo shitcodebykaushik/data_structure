@@ -260,13 +260,41 @@ The defining characterstic,storing things in a linear ,defined relationship with
   It is queue structure .
   It is very complex in rust as compare to other language .
     For real time implementation it is better to use std library for the rust.
+ ```Rust
+     // This is our node
+// Breakdown of this code 
+// struct = This simply defines that we are declaring the new  structure to hold the data.
+// Not is name of the given structure.
+// <> this indicates that it can hold the data different types of data here it can hold the data types of u128 bit.
+// data is the name of the field of given struct which can hold the u128 unsigned but integer.
+// next is another field name of same struct but its lil bit complex.
+     //Option<> This is optional value it can be some vale too
+     //Box<Not<u128>> This is boxed pointer to Not<u128>.
+        // Box is a smart pointer that manages the memory location
+        //Not<u128> refers back to the structer itself,allowing us to create linked list.
+// This is our node
+struct Not <u128> {
+    data : u128,
+    next: Option<Box<Not<u128>>>,
+}
+
+
+
+fn main (){
+   
+  
+
+
+
+  }
+   ```
    - Transaction log
    In rust each itmes is chained to the next by an `option` property.
 
    - Log replay
    Log represent the a timeline of commmand that have been executed in the exact oreder.
    `RefCells` checking borrowing rules at the runtime .
- ```Rust
+```Rust
  // Append entrie from the end.
  // Removing entries from the front .
 
