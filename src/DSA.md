@@ -278,24 +278,129 @@ struct Not <u128> {
     next: Option<Box<Not<u128>>>,
 }
 
-
-
 fn main (){
-   
   
-
-
-
   }
    ```
 
+   // This is pure implementation of linked list 
+```Rust
+
+type pointer= Option<Box<Node<u128>>>;
+
+struct Node <u128> {
+    data :u128,
+    next :pointer,
+}
+
+
+struct linklist {
+    head:pointer,
+}
+
+impl linklist {
+ fn new ()->linklist {
+    linklist {
+        head:None,
+    }
+ }
+fn remove (&mut self)-> Option<u128>{
+match self.head.take() {
+     Some (previous_head) => {
+ self.head = previous_head.next;
+ Some(previous_head.data)
+     }
+     None=>None,
+    
+}
+}
+ fn add (&mut self,data:u128){
+let previous_head = self.head.take();
+let new_head= Some(Box::new(Node{
+    data:data,
+    next:previous_head,
+}));
+self.head =new_head
+ }
+
+
+
+fn print (&self){
+    let mut list =&self.head;
+    while !list.is_none() {
+        println!("{:?}",list.as_ref().unwrap().data);
+        list=&list.as_ref().unwrap().next;
+        
+    }
+
+}
+}
+
+
+
+fn main (){
+let mut list = linklist::new();
+list.add(45);
+list.add(4509);
+list.add(45008);
+list.add(450007);
+list.add(4500006);
+list.add(45000005);
+list.add(45000004);
+list.add(450000003);
+list.add(4500000002);
+list.add(45000000001);
+list.remove();
+list.remove();
+list.remove();
+list.print();
+
+
+
+}
+```
    # Singly linked list 
    - A singly linked list is a linear data structure in which elements are stored in nodes, and each node points to the next node in the list. It is called a singly linked list because each node has a single link to the next node. In a singly linked list, you can traverse the list only in one direction, from the head (the first node) to the tail (the last node).
    - Travesre means visting each elements in the list to perform the operation.
    - Push means to insert at the end
   - Pop meand to remove from the begining 
 
-# Binary search Tree
+# Dynamic array 
+Array are one of the common way to store the data in the sequence order.However it lack the fundamental feature of list:expansion,Array are efficient because they are fixed-sized of container of length n where every element has the an equal size.Thus every element can be reached by calculating the address to jump to the using the simple formula `start_address +n*element size` 
+Array are CPU cache-frinedly
+
+# Tress
+ 
+ # Binary Tree
+```Rust
+#[derive(Debug)]
+
+struct  TreeNode<T> {
+    val :T,
+    left :Option<Box<TreeNode<T>>>,
+    right :Option<Box<TreeNode<T>>>
+}
+impl <T> TreeNode<T> {
+    pub fn new (val :T ) -> Self {
+        TreeNode {
+            val,
+            left:None,
+            right:None,
+        }
+    }
+    pub fn insert(&mut self ,val :T ){
+        self.left =Some(Box::new(TreeNode::new(val)))
+    }
+}
+
+fn main (){
+    let mut my_tree = TreeNode::new(785);
+    println!("{:?}",my_tree);
+    my_tree.insert(78564);
+    println!("After insert {:?}",my_tree);
+}
+```
+
 
 
 
