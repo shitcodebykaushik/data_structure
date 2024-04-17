@@ -404,7 +404,9 @@ fn main (){
 
 
 
-
+# Heap 
+ It is the region of memory that allows for dynamic memeory allocation. It doesn't have a specific order for the memeory allocation and the size is determined at the runtime .
+ 
 
 
 
