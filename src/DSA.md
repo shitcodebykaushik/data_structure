@@ -359,6 +359,11 @@ list.print();
 
 }
 ```
+ # Merging two sorted List 
+
+
+
+
    # Singly linked list 
    - A singly linked list is a linear data structure in which elements are stored in nodes, and each node points to the next node in the list. It is called a singly linked list because each node has a single link to the next node. In a singly linked list, you can traverse the list only in one direction, from the head (the first node) to the tail (the last node).
    - Travesre means visting each elements in the list to perform the operation.
@@ -400,6 +405,7 @@ fn main (){
     println!("After insert {:?}",my_tree);
 }
 ```
+#
 
 
 
